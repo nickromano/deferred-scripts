@@ -25,7 +25,7 @@ deferredScripts.addScript('https://www.google-analytics.com/ga.js', function() {
 	console.log('Loaded GA')
 })
 
-// addPartial(sourceURL)
+// addPartial(sourceURL) - requires jquery available
 deferredScripts.addPartial('./my-partial.html')
 
 // onLoadCallback is optional
