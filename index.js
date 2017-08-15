@@ -1,9 +1,11 @@
 function DeferredScripts() {
   this.deferredScripts = []
 }
+
 DeferredScripts.prototype.addScript = function(sourceURL, onLoadCallback) {
   this.deferredScripts.push({sourceURL: sourceURL, onLoadCallback: onLoadCallback})
 }
+
 DeferredScripts.prototype.loadScripts = function() {
   for (var i = this.deferredScripts.length - 1; i >= 0; i--) {
     var jsConfig = this.deferredScripts[i];
