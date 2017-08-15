@@ -15,13 +15,14 @@ DeferredScripts.prototype.loadScripts = function() {
     script = document.createElement('script');
     script.type = 'text/javascript';
     script.async = true;
-    script.onload = function(){
-        // remote script has loaded
-      if (typeof jsConfig.onLoadCallback !== "undefined") {
-         jsConfig.onLoadCallback();
-      }
-    };
+    script.onload = jsConfig.onLoadCallback;
     script.src = jsConfig.sourceURL;
     document.getElementsByTagName('head')[0].appendChild(script);
   }
+
+  this.deferredScripts = []
+}
+
+if (typeof module !== "undefined" && module && module.exports) {
+  module.exports = DeferredScripts;
 }
