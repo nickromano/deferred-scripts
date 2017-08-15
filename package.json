@@ -1,0 +1,18 @@
+{
+  "name": "deferred-scripts",
+  "version": "0.0.1",
+  "description": "Defer <script> tag loading until needed.",
+  "license": "MIT",
+  "repository": "nickromano/deferred-scripts",
+  "author": {
+    "name": "Nick Romano",
+    "email": "nick.r.romano@gmail.com",
+    "url": "nickromano.us"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "browser"
+  ]
+}

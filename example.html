@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+</head>
+<body>
+
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript">
+	var deferredScripts = new DeferredScripts();
+
+	deferredScripts.addScript('https://www.google-analytics.com/ga.js', function() {
+		document.body.innerHTML = 'Loaded GA';
+	})
+
+	document.body.innerHTML = 'Waiting to load GA...';
+	setTimeout(function() {
+		deferredScripts.loadScripts();
+	}, 1500)
+</script>
+
+</body>
+</html>
