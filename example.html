@@ -5,11 +5,16 @@
 </head>
 <body>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript">
 	var deferredScripts = new DeferredScripts();
 
 	deferredScripts.addScript('https://www.google-analytics.com/ga.js', function() {
+		document.body.innerHTML = 'Loaded GA';
+	})
+
+	deferredScripts.addPartial('./hip.html', function() {
 		document.body.innerHTML = 'Loaded GA';
 	})
 
