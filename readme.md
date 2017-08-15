@@ -19,10 +19,14 @@ npm install deferred-scripts
 ```javascript
 var deferredScripts = new DeferredScripts();
 
+// addScript(sourceURL, onLoadCallback)
 deferredScripts.addScript('https://www.google-analytics.com/ga.js', function() {
 	// Onload
 	console.log('Loaded GA')
 })
+
+// onLoadCallback is optional
+deferredScripts.addScript('https://www.google-analytics.com/ga.js')
 
 // When you're ready to load the scripts
 deferredScripts.loadScripts();
