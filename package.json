@@ -14,9 +14,11 @@
   ],
   "scripts": {
     "test-comment": "Removed colors with --no-colors because it doesn't work with solarized theme :(",
-    "test": "nyc mocha --no-colors"
+    "test": "nyc mocha --no-colors",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "devDependencies": {
+    "coveralls": "^2.13.1",
     "mocha": "^3.2.0",
     "mock-browser": "^0.92.14",
     "nyc": "^11.1.0"
