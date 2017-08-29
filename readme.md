@@ -22,14 +22,14 @@ var deferredScripts = new DeferredScripts();
 // addScript(sourceURL, onLoadCallback)
 deferredScripts.addScript('https://www.google-analytics.com/ga.js', function() {
 	// Onload
-	console.log('Loaded GA')
-})
+	console.log('Loaded GA');
+});
 
 // addPartial(sourceURL) - requires jquery available
-deferredScripts.addPartial('./my-partial.html')
+deferredScripts.addPartial('./my-partial.html');
 
 // onLoadCallback is optional
-deferredScripts.addScript('https://www.google-analytics.com/ga.js')
+deferredScripts.addScript('https://www.google-analytics.com/ga.js');
 
 // When you're ready to load the scripts
 deferredScripts.loadScripts();
